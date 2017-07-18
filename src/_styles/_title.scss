@@ -1,0 +1,17 @@
+.title {
+    display: table;
+    width: 100%;
+    height: 100%;
+}
+
+.title__text {
+    display: table-cell;
+    text-align: center;
+    height: 100%;
+    vertical-align: middle;
+    font-family: comfortaaregular, cursive;
+    font-size: 80px;
+    z-index: 2;
+    position: relative;
+    color: #555;
+}
