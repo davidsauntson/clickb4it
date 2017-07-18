@@ -1,0 +1,114 @@
+%shape {
+    border: 1px solid grey;
+}
+
+.shape--0 {
+    @extend %shape;
+    animation: spinner-0 15s linear infinite;
+}
+
+.shape--1 {
+    @extend %shape;
+    animation: spinner-1 10s linear infinite;
+}
+
+.shape--2 {
+    @extend %shape;
+    animation: spinner-2 20s linear infinite;
+}
+.shape--3 {
+    @extend %shape;
+    animation: spinner-3 5s linear infinite;
+}
+.shape--4 {
+    @extend %shape;
+    animation: spinner-4 12s linear infinite;
+}
+
+
+@keyframes spinner-0 {
+    0% {
+        transform: rotate3d(1, 1, 1, 0deg);
+        border-color: magenta;
+    }
+
+    50% {
+        border-color: cyan;
+
+    }
+
+    100% {
+        transform: rotate3d(-1, -1, -1, 359deg);
+        border-color: magenta;
+    }
+}
+
+
+@keyframes spinner-1 {
+    0% {
+        transform: rotate3d(1, 1, 1, 0deg);
+        border-color: cyan;
+    }
+
+    50% {
+        border-color: magenta;
+    }
+
+    100% {
+        transform: rotate3d(1, 1, 1, 359deg);
+        border-color: cyan;
+    }
+}
+
+@keyframes spinner-2 {
+    0% {
+        transform: rotate3d(-1, 1, 1, 0deg);
+        border-color: yellow;
+    }
+
+    50% {
+        border-color: cyan;
+        
+    }
+
+    100% {
+        transform: rotate3d(-1, 1, -1, 359deg);
+        border-color: yellow;
+    }
+}
+
+
+@keyframes spinner-3 {
+    0% {
+        transform: rotate3d(1, -1, 1, 0deg);
+        border-color: magenta;
+    }
+
+    50% {
+        border-color: yellow;
+        
+    }
+
+    100% {
+        transform: rotate3d(-1, 1, 1, 359deg);
+        border-color: magenta;
+    }
+}
+
+
+@keyframes spinner-4 {
+    0% {
+        transform: rotate3d(-1, -1, -1, 0deg);
+        border-color: cyan;
+    }
+
+    50% {
+        border-color: yellow;
+        
+    }
+
+    100% {
+        transform: rotate3d(1, 1, -1, 359deg);
+        border-color: cyan;
+    }
+}
