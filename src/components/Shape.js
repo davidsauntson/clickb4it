@@ -5,17 +5,15 @@ export class Shape extends React.Component {
         const { shapeIndex, layerIndex } = this.props;
 
         const style = {
-            left: Math.random() * window.innerWidth,
-            top: Math.random() * window.innerHeight,
-            position: 'absolute',
-            width: 10,
-            height: 10,
-        }
+            left: Math.random() * 100 + '%',
+            top: Math.random() * 100 + '%',
+            position: 'absolute'
+        };
 
-        const spinner = Math.round(Math.random() * 4);
+        const rando = Math.round(Math.random() * 50) + 1;
 
         return (
-            <div className={'shape--' + spinner} key={shapeIndex} style={style}></div>
+            <div className={'shape--' + rando} key={shapeIndex} style={style}></div>
         )
     }
 }

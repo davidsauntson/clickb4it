@@ -1,0 +1,35 @@
+@function clamp($number, $min, $max) {
+  @return min(max($number, $min), $max);
+}
+
+@mixin keyframes($name, $angle, $x, $y, $z, $start-color, $mid-color) {
+  @keyframes #{$name} {
+    0% {
+      transform: rotate3d($x, $y, $z, 0deg);
+      border-color: $start-color;
+    }
+    
+    50% {
+      border-color: $mid-color;
+    }
+    
+    100% {
+      transform: rotate3d($x, $y, $z, 359deg);
+      border-color: $start-color;
+    } 
+  } 
+}
+
+$colors: yellow, cyan, magenta;
+
+@for $i from 0 through 50 {
+    $angle: random(360);
+    $x: random() - 2;
+    $y: random() - 2;
+    $z: random() - 2;
+    
+    $start-color: nth($colors, random(3));
+    $mid-color: nth($colors, random(3));
+
+    @include keyframes(spinner-#{$i}, $angle, $x, $y, $z, $start-color, $mid-color);
+}

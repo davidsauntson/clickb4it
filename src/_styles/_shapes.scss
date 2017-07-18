@@ -1,114 +1,45 @@
-%shape {
+
+
+@mixin squareboi {
     border: 1px solid grey;
+    width: 10px;
+    height: 10px;
 }
 
-.shape--0 {
-    @extend %shape;
-    animation: spinner-0 15s linear infinite;
+@mixin circleboi {
+    border: 1px solid grey;
+    width: 10px;
+    height: 10px;
+    border-radius: 10px;
 }
 
-.shape--1 {
-    @extend %shape;
-    animation: spinner-1 10s linear infinite;
-}
-
-.shape--2 {
-    @extend %shape;
-    animation: spinner-2 20s linear infinite;
-}
-.shape--3 {
-    @extend %shape;
-    animation: spinner-3 5s linear infinite;
-}
-.shape--4 {
-    @extend %shape;
-    animation: spinner-4 12s linear infinite;
+@mixin ovalboi {
+    position: relative;
+    width: 10px;
+    height: 15px;
+    border: 1px solid grey;
+    border-radius: 50%;
 }
 
 
-@keyframes spinner-0 {
-    0% {
-        transform: rotate3d(1, 1, 1, 0deg);
-        border-color: magenta;
+@for $i from 1 through 50 {
+  
+  $duration: random(15);
+  
+  .shape--#{$i} {
+    animation: spinner-#{$i} #{$duration}s linear infinite;
+    
+    @if $i % 3 == 1 {
+      @include squareboi;
     }
-
-    50% {
-        border-color: cyan;
-
+    
+    @if $i % 3 == 2 {
+      @include circleboi;
     }
-
-    100% {
-        transform: rotate3d(-1, -1, -1, 359deg);
-        border-color: magenta;
+    
+    @if $i % 3 == 0 {
+      @include ovalboi;
     }
-}
-
-
-@keyframes spinner-1 {
-    0% {
-        transform: rotate3d(1, 1, 1, 0deg);
-        border-color: cyan;
-    }
-
-    50% {
-        border-color: magenta;
-    }
-
-    100% {
-        transform: rotate3d(1, 1, 1, 359deg);
-        border-color: cyan;
-    }
-}
-
-@keyframes spinner-2 {
-    0% {
-        transform: rotate3d(-1, 1, 1, 0deg);
-        border-color: yellow;
-    }
-
-    50% {
-        border-color: cyan;
-        
-    }
-
-    100% {
-        transform: rotate3d(-1, 1, -1, 359deg);
-        border-color: yellow;
-    }
-}
-
-
-@keyframes spinner-3 {
-    0% {
-        transform: rotate3d(1, -1, 1, 0deg);
-        border-color: magenta;
-    }
-
-    50% {
-        border-color: yellow;
-        
-    }
-
-    100% {
-        transform: rotate3d(-1, 1, 1, 359deg);
-        border-color: magenta;
-    }
-}
-
-
-@keyframes spinner-4 {
-    0% {
-        transform: rotate3d(-1, -1, -1, 0deg);
-        border-color: cyan;
-    }
-
-    50% {
-        border-color: yellow;
-        
-    }
-
-    100% {
-        transform: rotate3d(1, 1, -1, 359deg);
-        border-color: cyan;
-    }
+  }
+  
 }
