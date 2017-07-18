@@ -6,7 +6,7 @@ export class Layer extends React.Component {
 
     render() {
         const {layerIndex } = this.props;
-        const numberOfShapes = 100;
+        const numberOfShapes = 150;
         var shapes = [];
 
         for (var shapeIndex = 0; shapeIndex < numberOfShapes; shapeIndex++) {

@@ -5,7 +5,7 @@ import { Layer } from './Layer';
 export class Background extends React.Component {
 
     render() {
-        const numberOfLayers = 3
+        const numberOfLayers = 3;
         var layers = [];
 
         for (var layerIndex = 0; layerIndex < numberOfLayers; layerIndex++) {  
