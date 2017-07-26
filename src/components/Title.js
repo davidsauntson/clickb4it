@@ -1,12 +1,17 @@
 import React from 'react';
 
 class Title extends React.Component {
-    render() {
-        const { title } = this.props;
+    componentWillMount() {
+        const { onGenerateTitle } = this.props;
+        onGenerateTitle();
+    }
 
+    render() {
+        const { number, adjective, thing, subject, ending } = this.props;
+        
         return(
             <div className="title">
-                <h1 className="title__text">{ title }</h1>
+                <h1 className="title__text">{ number.toString() } { adjective } { thing } { subject } { ending }</h1>
             </div>
         );
     }
