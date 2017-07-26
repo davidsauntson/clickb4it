@@ -1,18 +1,14 @@
 import * as ActionTypes from '../constants/actions';
 
-const initialState = {
-    text: 101
-};
+const initialState = 101;
 
 export function number(state = initialState, action) {
     const { type, payload } = action;
 
     switch(type) {
         case ActionTypes.UPDATED_NUMBER:
-            return {
-                text: payload
-            }
-
+            return payload;
+            
         default:
             return state;
     }

@@ -11,7 +11,7 @@ class Title extends React.Component {
         
         return(
             <div className="title">
-                <h1 className="title__text">{ number.toString() } { adjective } { thing } { subject } { ending }</h1>
+                <h1 className="title__text">{ number } { adjective } { thing } { subject } { ending }</h1>
             </div>
         );
     }

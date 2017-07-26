@@ -5,7 +5,7 @@ import { generateTitle } from '../actions/titleActions';
 
 const mapStateToProps = (state) => {
     return {
-        number: state.number.text,
+        number: state.number,
         adjective: state.adjective.text,
         thing: state.thing.text,
         subject: state.subject.text,
