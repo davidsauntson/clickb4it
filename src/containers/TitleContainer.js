@@ -9,7 +9,7 @@ const mapStateToProps = (state) => {
         adjective: state.adjective.text,
         thing: state.thing.text,
         subject: state.subject.text,
-        ending: 'made'
+        ending: state.ending.text
     }
 }
 

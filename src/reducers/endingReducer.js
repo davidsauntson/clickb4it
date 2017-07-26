@@ -2,14 +2,14 @@ import * as ActionTypes from '../constants/actions';
 
 const initialState = {
     id: -1, 
-    text: "I" 
+    text: "made" 
 };
 
-export function subject(state = initialState, action) {
+export function ending(state = initialState, action) {
     const { type, payload } = action;
 
     switch(type) {
-        case ActionTypes.UPDATED_SUBJECT:
+        case ActionTypes.UPDATED_ENDING:
             return Object.assign({}, state, payload);
 
         default:
@@ -18,4 +18,4 @@ export function subject(state = initialState, action) {
 
 }
 
-export default subject;
+export default ending;

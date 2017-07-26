@@ -7,9 +7,9 @@ import {ENDINGS} from '../data/endings';
 export const generateTitle = () => {
     return function(dispatch) {
         dispatch(getNumber());
-        dispatch(generateAction(ADJECTIVES, ActionTypes.UPDATED_ADJECTIVE));
-        dispatch(generateAction(THINGS, ActionTypes.UPDATED_THING));
-       // dispatch(generateAction(SUBJECTS, ActionTypes.UPDATED_SUBJECT));
+        dispatch(getRandomArrayElement(ADJECTIVES, ActionTypes.UPDATED_ADJECTIVE));
+        dispatch(getRandomArrayElement(THINGS, ActionTypes.UPDATED_THING));
+        dispatch(getSubjectAndEnding());
     }
 }
 
@@ -23,7 +23,7 @@ const getNumber = () => {
     }
 }
 
-const generateAction = (array, actionType) => {
+const getRandomArrayElement = (array, actionType) => {
     const index = Math.round(Math.random() * array.length - 1);
 
     return {
@@ -31,6 +31,47 @@ const generateAction = (array, actionType) => {
         payload: {
             id: index,
             text: array[index]
+        }
+    }
+}
+
+const getSubjectAndEnding = () => {
+
+    return function(dispatch) {
+        const subjectIndex = Math.round(Math.random() * (SUBJECTS.length - 1));
+        const endingIndex = Math.round(Math.random() * (ENDINGS.length - 1));
+
+        const subject = SUBJECTS[subjectIndex];
+        const ending = ENDINGS[endingIndex];
+
+        dispatch(getSubject({
+            id: subjectIndex,
+            text: subject.text
+        }))
+
+        dispatch(getEnding({
+            id: endingIndex,
+            text: subject.shouldUseAltEnding ? ending.altEnding : ending.ending
+        }))
+    }
+}
+
+const getSubject = (subject) => {
+    return {
+        type: ActionTypes.UPDATED_SUBJECT,
+        payload: {
+            id: subject.id,
+            text: subject.text
+        }
+    }
+}
+
+const getEnding = (ending) => {
+    return {
+        type: ActionTypes.UPDATED_ENDING,
+        payload: {
+            id: ending.id,
+            text: ending.text
         }
     }
 }
