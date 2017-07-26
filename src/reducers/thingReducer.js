@@ -2,14 +2,14 @@ import * as ActionTypes from '../constants/actions';
 
 const initialState = {
     id: -1, 
-    text: "dumb" 
+    text: "things" 
 };
 
-export function adjective(state = initialState, action) {
+export function thing(state = initialState, action) {
     const { type, payload } = action;
 
     switch(type) {
-        case ActionTypes.UPDATED_ADJECTIVE:
+        case ActionTypes.UPDATED_THING:
             return Object.assign({}, state, payload);
 
         default:
@@ -18,4 +18,4 @@ export function adjective(state = initialState, action) {
 
 }
 
-export default adjective;
+export default thing;

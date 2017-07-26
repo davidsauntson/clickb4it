@@ -1,4 +1,4 @@
-export const ENDINGS = [
+export const SUBJECTS = [
     { text: 'you', shouldUseAltEnding: true }, 
     { text: 'your mother', shouldUseAltEnding: false }, 
     { text: 'the govenment', shouldUseAltEnding: false }, 

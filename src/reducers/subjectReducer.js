@@ -2,20 +2,20 @@ import * as ActionTypes from '../constants/actions';
 
 const initialState = {
     id: -1, 
-    text: "dumb" 
+    text: "I" 
 };
 
-export function adjective(state = initialState, action) {
+export function subject(state = initialState, action) {
     const { type, payload } = action;
 
     switch(type) {
-        case ActionTypes.UPDATED_ADJECTIVE:
+        case ActionTypes.UPDATED_SUBJECT:
             return Object.assign({}, state, payload);
 
         default:
-            return state;
+            return initialState;
     }
 
 }
 
-export default adjective;
+export default subject;

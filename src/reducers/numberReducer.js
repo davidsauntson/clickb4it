@@ -14,7 +14,7 @@ export function number(state = initialState, action) {
             }
 
         default:
-            return initialState;
+            return state;
     }
 
 }
