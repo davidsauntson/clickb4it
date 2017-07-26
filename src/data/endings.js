@@ -7,7 +7,7 @@ export const ENDINGS = [
     { ending: 'uses to acheive mindfulness', altEnding: 'use to acheive mindfulnes' }, 
     { ending: 'eats every day', altEnding: 'eat every day' }, 
     { ending: 'thinks about all the time', altEnding: 'think about all the time' }, 
-    { ending: 'regrets', altEnding: 'regret' }, 
+    { ending: 'regrets putting inside their body', altEnding: 'regret putting inside their body' }, 
     { ending: 'regrets tweeting', altEnding: 'regret tweeting' }, 
     { ending: 'forgets tweeting', altEnding: 'forget tweeting' }, 
     { ending: 'never tweeted', altEnding: 'never tweeted' }, 
