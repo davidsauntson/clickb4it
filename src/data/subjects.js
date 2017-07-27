@@ -13,4 +13,10 @@ export const SUBJECTS = [
     { text: 'facists', shouldUseAltEnding: true }, 
     { text: 'liberals', shouldUseAltEnding: true }, 
     { text: 'North Londoners', shouldUseAltEnding: true }, 
+    { text: 'the Tories', shouldUseAltEnding: true },
+    { text: 'the FBI', shouldUseAltEnding: true },
+    { text: 'MI6', shouldUseAltEnding: true },
+    { text: 'Father Christmas', shouldUseAltEnding: false },
+    { text: 'panic buyers', shouldUseAltEnding: true },
+    { text: 'the cast of OITNB', shouldUseAltEnding: false }
 ]
