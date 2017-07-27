@@ -32,4 +32,27 @@ $colors: yellow, cyan, magenta;
     $mid-color: nth($colors, random(3));
 
     @include keyframes(spinner-#{$i}, $angle, $x, $y, $z, $start-color, $mid-color);
-}
+  }
+
+
+  @keyframes button {
+    0% {
+      border-color: magenta;
+      background-color: rgba(0, 255, 0, 1);
+    }
+
+    33% {
+      border-color: cyan;
+      background-color: rgba(255, 0, 255, 1);
+    }
+
+    66% {
+      border-color: yellow;
+      background-color: rgba(0, 255, 255, 1);
+    }
+
+    100% {
+      border-color: magenta;
+      background-color: rgba(0, 255, 0, 1);
+    }
+  }

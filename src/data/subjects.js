@@ -9,7 +9,7 @@ export const SUBJECTS = [
     { text: 'the world', shouldUseAltEnding: false }, 
     { text: 'remotes tribesmen', shouldUseAltEnding: true }, 
     { text: 'LGBTQ people', shouldUseAltEnding: true }, 
-    { text: 'Donald Trump', shouldUseAltEnding: false }, 
+    { text: 'Donald Trump', shouldUseAltEnding: true }, 
     { text: 'facists', shouldUseAltEnding: true }, 
     { text: 'liberals', shouldUseAltEnding: true }, 
     { text: 'North Londoners', shouldUseAltEnding: true }, 

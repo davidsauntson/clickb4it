@@ -1,10 +1,28 @@
 .button__container {
     display: block;
-    margin: 50px auto;
 }
 
 .button {
     display: block;
     padding: 20px;
-    border: 1px solid red;
+    border: 5px solid red;
+    margin: 80px auto 0 auto;
+    width: 150px;
+    height: 150px;
+    border-radius: 75px;
+    font-family: comfortaaregular, cursive;
+    animation: button 1s linear infinite;
+    z-index: 10;
+    position: relative;
+    background-color: #ffffff;
+    color: #333333;
+    font-size: 20px;
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    &:focus {
+        outline: none;
+    }
 }
