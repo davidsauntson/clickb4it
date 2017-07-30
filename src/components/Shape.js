@@ -2,7 +2,7 @@ import React from 'react';
 
 export class Shape extends React.Component {
     render() {
-        const { shapeIndex, layerIndex } = this.props;
+        const { shapeIndex } = this.props;
 
         const style = {
             left: Math.random() * 100 + '%',

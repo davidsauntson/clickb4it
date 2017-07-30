@@ -18,4 +18,9 @@
     width:100%;
     display: block;
     box-sizing: border-box;
+
+    @media (max-width: 425px) {
+        font-size: 35px;
+        padding: 0 30px;
+    }
 } 

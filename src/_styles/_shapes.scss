@@ -1,13 +1,13 @@
 
 
 @mixin squareboi {
-    border: 1px solid grey;
+    border: 1px solid magenta;
     width: 10px;
     height: 10px;
 }
 
 @mixin circleboi {
-    border: 1px solid grey;
+    border: 1px solid cyan;
     width: 10px;
     height: 10px;
     border-radius: 10px;
@@ -17,7 +17,7 @@
     position: relative;
     width: 10px;
     height: 15px;
-    border: 1px solid grey;
+    border: 1px solid yellow;
     border-radius: 50%;
 }
 
@@ -27,7 +27,6 @@
   $duration: random(15);
   
   .shape--#{$i} {
-    animation: spinner-#{$i} #{$duration}s linear infinite;
     
     @if $i % 3 == 1 {
       @include squareboi;
@@ -39,6 +38,12 @@
     
     @if $i % 3 == 0 {
       @include ovalboi;
+    }
+
+    animation: spinner-#{$i} #{$duration}s linear infinite;
+
+    @media (max-width: 425px) {
+      animation: none;
     }
   }
   
